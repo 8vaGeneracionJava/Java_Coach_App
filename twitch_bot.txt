@@ -1,0 +1,7 @@
+Bot para discord en Java, links útiles:
+* Ejemplo bot en Java: https://github.com/robinfriedli/botify
+* Librería para bots en Java (Java-Twirk): https://github.com/Gikkman/Java-Twirk
+* Documentación de Twitch sobre chatbots: https://dev.twitch.tv/docs/irc
+* Twitch API: https://dev.twitch.tv/docs/api/
+
+
