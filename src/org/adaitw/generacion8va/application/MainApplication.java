@@ -8,9 +8,9 @@ public class MainApplication {
         Scanner scan = new Scanner(System.in);
         System.out.println("Bienveni@");
         System.out.println("Introduzca su nombre de usuario: ");
-        user.name = scan.nextLine();
+        user.setName(scan.nextLine());
         System.out.println("Introduzca su contraseña: ");
-        user.password = scan.nextLine();
-        System.out.printf("Los datos del usuario son: %s y %s", user.name, user.password);
+        user.setPassword(scan.nextLine());
+        System.out.printf("Los datos del usuario son: %s", user.showUser());
     }
 }
