@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MainApplication {
     public static void main(String[] args) {
+    	    	
         User user = new User();
         Scanner scan = new Scanner(System.in);
         System.out.println("Bienveni@");
