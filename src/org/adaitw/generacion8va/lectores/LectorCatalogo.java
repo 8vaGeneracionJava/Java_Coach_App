@@ -36,7 +36,7 @@ public class LectorCatalogo {
 			// creamos un nuevo capitulo con los datos obtenidos de la linea
 			Capitulo cap = new Capitulo(nroCapitulo, nombre, nivel);
 			
-			// a�adimos el capitulo a nuestra coleccion
+			// añadimos el capitulo a nuestra coleccion
 			capitulos.add(cap);
 			
 		}
