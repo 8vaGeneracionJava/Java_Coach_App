@@ -1,28 +1,27 @@
 package org.adaitw.generacion8va.application;
 
 public class User {
+    private String nombre;
+    private int nivel;
 
-    private String name;
-
-    private String password;
-
-    public String getName() {
-        return name;
+    public User(String nombre, int nivel) {
+        this.nombre = nombre;
+        this.nivel = nivel;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getPassword() {
-        return password;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public int getNivel() {
+        return nivel;
     }
 
-    public String showUser() {
-        return name + " y " + password;
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 }
