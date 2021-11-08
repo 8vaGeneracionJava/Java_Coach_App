@@ -14,7 +14,7 @@ public class LectorCatalogo {
 		LinkedList<Capitulo> capitulos = new LinkedList<Capitulo>();
 		
 		// creamos el archivo con su ruta
-		File archivo = new File("catalogoInput2/capitulos.in");
+		File archivo = new File("catalogoInput/capitulos.in");
 		// creamos el scanner con ese archivo
 		Scanner sc = new Scanner(archivo);
 		
