@@ -56,7 +56,7 @@ public class Concepto {
 
 	@Override
 	public String toString() {
-		return "nro " + nroConcepto + ": " + nombre ;
+		return "\t" + nroConcepto + ": " + nombre ;
 	}
 	
 }

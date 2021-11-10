@@ -1,16 +1,24 @@
 package org.adaitw.generacion8va.application.menu;
 
-import org.adaitw.generacion8va.application.mensaje.teoria.Teoria;
 import org.adaitw.generacion8va.catalogoTeoria.Capitulo;
+import org.adaitw.generacion8va.catalogoTeoria.Concepto;
 import org.adaitw.generacion8va.lectores.LectorCatalogo;
 
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Scanner;
-import org.adaitw.generacion8va.application.mensaje.bienvenida.*;
+
+import org.adaitw.generacion8va.application.User;
+import org.adaitw.generacion8va.application.mensajes.Bienvenida;
+import org.adaitw.generacion8va.application.mensajes.Teoria;
 
 public class Menu {
+	static LinkedList<Capitulo> catalogo;
+	
     public static void main(String[] args) throws FileNotFoundException {
+    	LectorCatalogo lector = new LectorCatalogo();
+    	catalogo = lector.getCapitulos();
+    	
         Bienvenida bienvenida = new Bienvenida();
         // MENÚ INICIAL
         bienvenida.mensajeBienvenida();
@@ -57,13 +65,23 @@ public class Menu {
 
     }
 
-    public static void mostrarCatalogoPorNivel(User usuario) throws FileNotFoundException {
-        LinkedList<Capitulo> catalogo = LectorCatalogo.leerCapitulos();
+    public static void mostrarCatalogoPorNivel(User usuario){
         for (Capitulo capitulo : catalogo) {
             if((usuario.getNivel() == 1 && capitulo.getDificultad().equals("Basico")) || (usuario.getNivel() == 2 && capitulo.getDificultad().equals("Intermedio")) || (usuario.getNivel() == 3 && capitulo.getDificultad().equals("Avanzado"))){
-                System.out.println(capitulo);
+                mostrarConceptosDeUnCapitulo(capitulo.getNroCapitulo());;
             }
         }
-
+    }
+    
+    public static void mostrarConceptosDeUnCapitulo(int nroCapitulo) {
+    	for (Capitulo cap : catalogo) {
+    		if (cap.getNroCapitulo() == nroCapitulo) {
+    			System.out.println(cap);
+    			for(Concepto concep : cap.getConceptos()) {
+    				System.out.println(concep);
+    			}
+    			break;
+    		}
+    	}
     }
 }

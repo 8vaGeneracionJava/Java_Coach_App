@@ -19,28 +19,30 @@ public class App {
     			
         Scanner read = new Scanner(System.in);
         // MENÚ INICIAL
-        //AcÃ¡ irÃ­a un mÃ©todo que muestre el mensaje de bienvenida
-        System.out.print("Bienvenido/a a Java Coach App! \nA continuaciÃ³n ingrese su nombre: \n");
+        //Acá irá un método que muestre el mensaje de bienvenida
+        System.out.print("Bienvenido/a a Java Coach App! \nA continuación ingrese su nombre: \n");
         String nombre = read.nextLine();
+        System.out.println();
         System.out.printf("Hola %s! \nAhora vamos a definir tu nivel de dificultad: \n", nombre);
         System.out.println("1- Elegir mi nivel");
         System.out.println("2- Evaluar mi conocimiento actual");
         int opcion = read.nextInt();
+        System.out.println();
         int nivel = 1;
         switch (opcion){
             case 1:
                 System.out.print("Elija una de las opciones: \n 1- BÃ¡sico \n 2- Intermedio \n 3- Avanzado \n");
                 nivel = read.nextInt();
                 break;
-                //Puse 1 como ejemplo pero acÃ¡ irÃ­a el mÃ©todo que nos permita evaluar el conocimiento y retorne el nivel
+                //Puse 1 como ejemplo pero acá irá el método que nos permita evaluar el conocimiento y retorne el nivel
             case 2: nivel = 1;
         }
 
          User usuario = new User(nombre, nivel);
 
-        //MENÃš ACTIVIDADES
-        System.out.println("Â¿QuÃ© te gustarÃ­a hacer?");
-        System.out.print("1- Estudiar un concepto especÃ­fico \n2- Estudiar temas aleatorios \n3- Subir de nivel de " +
+        //MENÚ ACTIVIDADES
+        System.out.println("¿Qué te gustaría hacer?");
+        System.out.print("1- Estudiar un concepto específico \n2- Estudiar temas aleatorios \n3- Subir de nivel de " +
                 "dificultad\n");
         int actividad = read.nextInt();
         switch (actividad){
