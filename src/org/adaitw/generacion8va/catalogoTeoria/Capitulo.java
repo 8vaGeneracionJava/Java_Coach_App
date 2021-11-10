@@ -1,9 +1,6 @@
 package org.adaitw.generacion8va.catalogoTeoria;
 
-import java.io.FileNotFoundException;
 import java.util.LinkedList;
-
-import org.adaitw.generacion8va.lectores.LectorCatalogo;
 
 public class Capitulo {
 	private int nroCapitulo;
@@ -35,9 +32,13 @@ public class Capitulo {
 		return dificultad;
 	}
 	
+	public void agregarConcepto(Concepto concepto) {
+		this.conceptos.add(concepto);
+	}
+
 	@Override
 	public String toString() {
-		return "Capitulo " + nroCapitulo + ": " + nombre + ", dificultad=" + dificultad + ",\n conceptos=" + conceptos;
+		return "Capitulo " + nroCapitulo + ": " + nombre;
 	}
 
 	/*

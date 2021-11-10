@@ -21,6 +21,14 @@ public class Concepto {
 		this.ejemplos = new LinkedList<Ejemplo>();
 	}
 
+	public void agregarPregunta(Pregunta pregunta) {
+		this.preguntas.add(pregunta);
+	}
+	
+	public void agregarEjemplo(Ejemplo ejemplo) {
+		this.ejemplos.add(ejemplo);
+	}
+	
 	public int getNroCapitulo() {
 		return nroCapitulo;
 	}
@@ -44,6 +52,11 @@ public class Concepto {
 
 	public LinkedList<Ejemplo> getEjemplos() {
 		return ejemplos;
+	}
+
+	@Override
+	public String toString() {
+		return "\t" + nroConcepto + ": " + nombre ;
 	}
 	
 }

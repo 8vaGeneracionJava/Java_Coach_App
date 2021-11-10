@@ -1,5 +1,7 @@
 package org.adaitw.generacion8va.catalogoTeoria;
 
+import java.util.Arrays;
+
 public class Pregunta {
 	private int nroCapitulo;
 	private int nroConcepto;
@@ -42,5 +44,13 @@ public class Pregunta {
 	public int getRespuestaCorrecta() {
 		return respuestaCorrecta;
 	}
+
+	@Override
+	public String toString() {
+		return "Pregunta " + nroPregunta + ": " + pregunta + "\n"
+				+ Arrays.toString(respuestas) + "\nRespuestaCorrecta=" + respuestaCorrecta;
+	}
+	
+	
 	
 }
