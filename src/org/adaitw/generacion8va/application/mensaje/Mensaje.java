@@ -7,21 +7,14 @@ package org.adaitw.generacion8va.application.mensaje;
     * Mensaje de Ejemplo: deberá recibir un ejemplo de un concepto y mostrarlo.
  */
 
-/*
-* MOSTRAR CONTENIDO --> CONCEPTOS
-* CAPITULO 1        -->
-*   CONCEPTO 1
-*   CONCEPTO 2
-*   CONCEPTO 3
-*
-* CAPITULO 2
-* .
-* .
-* .
-* CAPITULO 6
-* */
-public  class Mensaje {
+public abstract class Mensaje {
     private String titulo;
     private String teoria;
+
+    public Mensaje(){}
+
+    public abstract void armarTituloMensaje();
+    public abstract void armarCuerpoMensaje();
+
 
 }

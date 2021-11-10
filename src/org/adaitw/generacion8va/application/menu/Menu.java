@@ -11,10 +11,10 @@ import org.adaitw.generacion8va.application.mensaje.bienvenida.*;
 
 public class Menu {
     public static void main(String[] args) throws FileNotFoundException {
-        Bienvenida bienvenida = new Bienvenida();
+        Bienvenida mensajeBienvenida = new Bienvenida();
         // MENÚ INICIAL
-        bienvenida.mensajeBienvenida();
-        String nombre = bienvenida.nombreUser();
+        mensajeBienvenida.mensajeBienvenida();
+        String nombre = mensajeBienvenida.nombreUser();
 
         Scanner read = new Scanner(System.in);
         System.out.printf("Hola %s! \nAhora vamos a definir tu nivel de dificultad: \n", nombre);

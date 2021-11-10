@@ -2,21 +2,35 @@ package org.adaitw.generacion8va.application.mensaje.teoria;
 
 import org.adaitw.generacion8va.application.mensaje.Mensaje;
 
-public class Teoria {
+public class Teoria extends Mensaje{
+    private String titulo1;
+    private String teoria1;
 
-    public Teoria(int nroCapitulo, int nroConcepto){
-        //String titulo = listaConceptos.get(nroConcepto).nombre;
-        //String teoria = listaConceptos.get(nroConcepto).teoria;
+    @Override
+    public void armarTituloMensaje(int nroConcepto){
+        titulo = listaConceptos.get(nroConcepto).nombre;
+    }
+
+    @Override
+    public void armarCuerpoMensaje(int nroConcepto) {
+        teoria = listaConceptos.get(nroConcepto).teoria;
+    }
+
+    public Teoria(int nroConcepto){
+        armarTituloMensaje(nroConcepto);
+        armarCuerpoMensaje(nroConcepto);
     }
 
     public Teoria(){
-        //String titulo = listaConceptos.get(Math.ramdon()*10).nombre
+        int nroConcepto = Math.random()*10;
+        armarTituloMensaje(nroConcepto);
+        armarCuerpoMensaje(nroConcepto);
     }
-    /*
+
     @Override
     public String toString() {
-        return super.toString(titulo": \n" + teoria);
+        return (titulo1 + ": \n" + teoria1);
     }
-    */
+
 
 }

@@ -21,6 +21,7 @@ public class Concepto {
 		this.ejemplos = new LinkedList<Ejemplo>();
 	}
 
+
 	public int getNroCapitulo() {
 		return nroCapitulo;
 	}
