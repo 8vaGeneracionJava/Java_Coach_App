@@ -42,7 +42,7 @@ _| conceptos.in |_______________________________
 
   ______________
 _| preguntas.in |_______________________________
-[nroCapi:int]X[nroConc:int]X[nroPreg:int]X[pre:String]X[cantResp:int]X[resp1:String],[resp2:String]X[resp3:String]X[nroRespCorrecta:int]
+[nroCapi:int],[nroConc:int],[nroPreg:int],[pre:String],[cantResp:int],[resp1:String],[resp2:String],[resp3:String],[nroRespCorrecta:int]
 
   ______________
 _| ejemplos.in  |_______________________________
