@@ -86,7 +86,7 @@ public class LectorCatalogo {
 			int nroCapitulo = Integer.parseInt(arrDatos[0]);
 			int nroConcepto = Integer.parseInt(arrDatos[1]);
 			String nombre = arrDatos[2];
-			String teoria = arrDatos[3];
+			String teoria = arrDatos[3].replace("\\n", "\n");
 
 			// creamos un nuevo capitulo con los datos obtenidos de la linea
 			Concepto con = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
@@ -102,10 +102,6 @@ public class LectorCatalogo {
 
 		// cerramos el lector
 		sc.close();
-
-	}
-
-	public void leerEjemplos() throws FileNotFoundException {
 
 	}
 
@@ -162,4 +158,9 @@ public class LectorCatalogo {
 		// cerramos el lector
 		sc.close();
 	}
+
+	public void leerEjemplos() throws FileNotFoundException {
+
+	}
+
 }
