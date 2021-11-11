@@ -1,4 +1,4 @@
-package org.adaitw.generacion8va.catalogoTeoria;
+package org.adaitw.generacion8va.catalogo;
 
 public class Ejemplo {
 	private int nroCapitulo;
@@ -16,6 +16,7 @@ public class Ejemplo {
 		this.descripcion = descripcion;
 	}
 
+	//region GETTERS y SETTERS 
 	public int getNroCapitulo() {
 		return nroCapitulo;
 	}
@@ -35,5 +36,5 @@ public class Ejemplo {
 	public String getDescripcion() {
 		return descripcion;
 	}	
-	
+	//endregion
 }

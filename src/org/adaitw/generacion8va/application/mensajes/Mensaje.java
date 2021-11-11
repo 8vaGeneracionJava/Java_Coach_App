@@ -20,8 +20,9 @@ package org.adaitw.generacion8va.application.mensajes;
 * .
 * CAPITULO 6
 * */
+@SuppressWarnings("unused")
 public  class Mensaje {
-    private String titulo;
+	private String titulo;
     private String teoria;
 
 }

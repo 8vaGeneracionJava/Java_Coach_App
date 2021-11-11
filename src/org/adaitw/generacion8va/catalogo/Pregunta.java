@@ -1,4 +1,4 @@
-package org.adaitw.generacion8va.catalogoTeoria;
+package org.adaitw.generacion8va.catalogo;
 
 import java.util.Arrays;
 
@@ -21,6 +21,7 @@ public class Pregunta {
 		this.respuestaCorrecta = respuestaCorrecta;
 	}
 
+	//region GETTERS y SETTERS 
 	public int getNroCapitulo() {
 		return nroCapitulo;
 	}
@@ -44,6 +45,7 @@ public class Pregunta {
 	public int getRespuestaCorrecta() {
 		return respuestaCorrecta;
 	}
+	//endregion
 
 	@Override
 	public String toString() {

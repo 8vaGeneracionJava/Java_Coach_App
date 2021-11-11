@@ -9,6 +9,18 @@ public class User {
         this.nivel = nivel;
     }
 
+    public String nivelUsuarioAString() {
+		switch (nivel) {
+		case 1:
+			return "Basico";
+		case 2:
+			return "Intermedio";
+		case 3:
+			return "Avanzado";
+		}
+		return "Basico";
+	}
+    
     public String getNombre() {
         return nombre;
     }
