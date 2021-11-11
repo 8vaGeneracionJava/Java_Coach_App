@@ -12,11 +12,11 @@ import java.util.TreeMap;
  * Clase que se ocupa de hacer el ingreso del material teórico guardado en
  * archivos a la aplicación
  */
-public class LectorCatalogo {
+public class LectorArchivos {
 
 	private TreeMap<Integer, Capitulo> capitulos;
 
-	public LectorCatalogo() throws FileNotFoundException {
+	public LectorArchivos() throws FileNotFoundException {
 		super();
 		capitulos = new TreeMap<Integer, Capitulo>();
 		this.leerCapitulos();
@@ -97,7 +97,7 @@ public class LectorCatalogo {
 			nroCapitulo = Integer.parseInt(arrDatos[0]);
 			nroConcepto = Integer.parseInt(arrDatos[1]);
 			nombre = arrDatos[2];
-			teoria = arrDatos[3];
+			teoria = arrDatos[3].replace("\\n", "\n");
 
 			// creamos un nuevo capitulo con los datos obtenidos de la linea
 			concept = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
@@ -136,7 +136,7 @@ public class LectorCatalogo {
 			linea = sc.nextLine();
 
 			// separamos la linea segun el separador en un array
-			arrDatos = linea.split(",");
+			arrDatos = linea.split("X");
 
 			// parseamos los datos numericos y asignamos los datos a los parametros
 			// que le vamos a pasar al constructor
@@ -168,7 +168,7 @@ public class LectorCatalogo {
 
 	private void leerEjemplos() throws FileNotFoundException {
 		// creamos el archivo con su ruta
-		File archivo = new File("catalogoInput/preguntas.in");
+		File archivo = new File("catalogoInput/ejemplos.in");
 		// creamos el scanner con ese archivo
 		Scanner sc = new Scanner(archivo);
 
@@ -196,8 +196,8 @@ public class LectorCatalogo {
 			nroCapitulo = Integer.parseInt(arrDatos[0]);
 			nroConcepto = Integer.parseInt(arrDatos[1]);
 			nroEjemplo = Integer.parseInt(arrDatos[2]);
-			ejempStr = arrDatos[3];
-			descrip = arrDatos[4];
+			ejempStr = arrDatos[3].replace("\\n", "\n");
+			descrip = arrDatos[4].replace("\\n", "\n");
 
 			// creamos un nuevo pregunta con los datos obtenidos de la linea
 			ejemplo = new Ejemplo(nroCapitulo, nroConcepto, nroEjemplo, ejempStr, descrip);

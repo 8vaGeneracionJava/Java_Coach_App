@@ -20,7 +20,7 @@ public class Catalogo {
 
 	public Catalogo() throws FileNotFoundException {
 		super();
-		LectorCatalogo lector = new LectorCatalogo();
+		LectorArchivos lector = new LectorArchivos();
 		this.capitulos = lector.getCapitulos();
 		this.catalogo = lector.getCatalogo();
 	}

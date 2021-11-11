@@ -1,0 +1,56 @@
+*******************************
+*   Guia de uso de Archivos   *
+*******************************
+
+.En esta carpeta se almacenarán los archivos que serán leidos por nuestra 
+aplicación cuando cargue sus datos al iniciar.
+.Se pueden editar en cualquier programa que abra archivos de texto simple 
+(bloc de notas por ej) o en el mismo IDE
+.Para hacer buen uso y no tener errores, por favor sigan esta estructura de
+datos:
+
+- Una entrada por linea,
+- Respetar los separadores
+- Fijarse de no usar el separador con otro proposito que no sea el de separar
+nuestros parametros
+- Prestar atencion de que la cantidad de parametros por linea sea la misma que 
+se pide por el tipo de dato
+
+
+********************
+*    Plantillas    *
+********************
+*ejemplo de pregunta con 3 respuestas posibles, puede variar segun el numero que pongamos en [cantResp:int]*
+
+-Abreviaciones: 
+nro  -> numero
+nomb -> nombre
+capi -> capitulo
+conc -> concepto
+preg -> pregunta
+cant -> cantidad
+resp -> respuesta
+ejem -> ejemplo
+
+  ______________
+_| capitulos.in |_______________________________
+[nroCapi:int];[nomCapi:String];[nivel:String]
+
+  ______________
+_| conceptos.in |_______________________________
+[nroCapi:int];[nroConc:int];[nomConc:String];[teoria:String]
+
+  ______________
+_| preguntas.in |_______________________________
+[nroCapi:int]X[nroConc:int]X[nroPreg:int]X[pre:String]X[cantResp:int]X[resp1:String],[resp2:String]X[resp3:String]X[nroRespCorrecta:int]
+
+  ______________
+_| ejemplos.in  |_______________________________
+[nroCap:int]X[nroCon:int]X[nroEjem:int]X[ejem:String]X[descripcion:String]
+
+
+
+
+
+
+
