@@ -1,1 +1,9 @@
 3X2X1XconcatenacionXSystem.out.println (1 + 2); // 3 Ambos operandos son numeros,por lo que usamos la suma normal\nSystem.out.println ("a" + "b"); // ab   es una concatenacion de cadenas simples.\n System.out.println ("a" + "b" + 3); // ab3 primero se ejecutar "a"+"b" y luego la restante 3.\nSystem.out.println (1 + 2 + "c"); // 3c  Ambos operandos son numéricos se suman 3 y se concatena con C\n
+1X6X2XComodinesXimport java.util.*;
+1X7X3XImportaciones redundantesXimport java.util.*; import java.util.Random;
+1X7X4XImportaciones redundantesXimport java.lang.*;
+1X8X5XConflicto de nombresXUtilizar la clase Date: import java.util.*; import java.sql.*; //no compila ya que la clase Date se encuentra en ambos paquetes. Solución: import java.util.Date; import java.sql.*;
+1X9X6XPaquetesXpackage adaitw
+2X1X7XOperadoresXi++ //Operador unario. a==b //operador binario. resultado=(condicion)? valor1: valor2; //Operador ternario.
+2X2X8XOperadores aritméticosXint x=2+2;
+2X2X9XOperadores aritméticosXSystem.out.print(2*10);
