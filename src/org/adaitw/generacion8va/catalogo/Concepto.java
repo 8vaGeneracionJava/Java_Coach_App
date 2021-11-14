@@ -23,11 +23,11 @@ public class Concepto {
 	}
 
 	public void agregarPregunta(Pregunta pregunta, int nroPregunta) {
-		this.preguntas.add(nroPregunta, pregunta);
+		this.preguntas.add(pregunta);
 	}
 
 	public void agregarEjemplo(Ejemplo ejemplo, int nroEjemplo) {
-		this.ejemplos.add(nroEjemplo, ejemplo);
+		this.ejemplos.add(ejemplo);
 	}
 
 	public Pregunta seleccionarPreguntaNro(int nroPregunta) {
@@ -97,8 +97,10 @@ public class Concepto {
 
 	public void mostrarTeoria() {
 		System.out.println(this);
+		System.out.println("----------------------------------");
 		System.out.println(this.teoria);
-		
+		System.out.printf("[Capítulo %02d | Concepto %02d]\n\n", this.nroCapitulo, this.nroConcepto);
+
 	}
 
 }

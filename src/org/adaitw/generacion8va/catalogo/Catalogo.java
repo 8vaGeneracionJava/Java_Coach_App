@@ -19,7 +19,6 @@ public class Catalogo {
 	private TreeMap<String, TreeMap<Integer, Capitulo>> catalogo;
 
 	public Catalogo() throws FileNotFoundException {
-		super();
 		LectorArchivos lector = new LectorArchivos();
 		this.capitulos = lector.getCapitulos();
 		this.catalogo = lector.getCatalogo();
@@ -28,6 +27,7 @@ public class Catalogo {
 	/*
 	 * ***** SELECCIONAR LISTAS *****
 	 */
+	
 	public TreeMap<Integer, Capitulo> seleccionarMapaCapitulosPorNivel(String nivel) {
 		return catalogo.get(nivel);
 	}
@@ -112,6 +112,8 @@ public class Catalogo {
 
 	/*
 	 * ***** MOSTRAR LISTAS *****
+	 * 
+	 * PASAR A MENSAJES <--
 	 */
 	public void mostrarConceptosDelCapitulo(int nroCap) {
 		ArrayList<Concepto> lista = seleccionarListaConceptos(nroCap);
@@ -158,8 +160,6 @@ public class Catalogo {
 	/*
 	 * ***** MOSTRAR ESPECIFICOS *****
 	 * 
-	 * PASAR A MENSAJES  <--
 	 */
-
 
 }

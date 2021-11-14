@@ -9,6 +9,8 @@ public class App {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Catalogo catalogo = new Catalogo();
+		
+		String separador = "*******************************************";
 
 		// INDICE CATALOGO COMPLETO
 		// catalogo.mostrarIndiceCompleto();
@@ -18,19 +20,19 @@ public class App {
 		// Acá irá un método que muestre el mensaje de bienvenida
 		System.out.print("Bienvenido/a a Java Coach App! \nA continuación ingrese su nombre: \n");
 		String nombre = read.nextLine();
-		System.out.println();
+		System.out.println(separador);
 
 		// Seleccion nivel
 		System.out.printf(
-				"Hola %s! \nAhora vamos a definir tu nivel de conocimientos: \n 1- Elegir mi nivel\n 2- Evaluar mi conocimiento actual\n",
+				"Hola %s! \nAhora vamos a definir tu nivel de conocimientos: \n 1- Elegir mi nivel\n 2- Evaluar mi conocimiento actua\n",
 				nombre);
 		int opcion = read.nextInt();
-		System.out.println();
+		System.out.println(separador);
 
 		int nivel;
 		switch (opcion) {
 		case 1:
-			System.out.println("Elija una de las opciones: \n 1- Básico \n 2- Intermedio \n 3- Avanzado\n");
+			System.out.println("Elija una de las opciones: \n 1- Básico \n 2- Intermedio \n 3- Avanzado");
 			nivel = read.nextInt();
 			break;
 		case 2:
@@ -43,7 +45,7 @@ public class App {
 			nivel = 1;
 			break;
 		}
-		System.out.println();
+		System.out.println(separador);
 		
 		// Creacion usuario
 		User usuario = new User(nombre, nivel);
@@ -55,9 +57,9 @@ public class App {
 		do {
 			System.out.printf("¿Qué te gustaría hacer hoy, %s?\n", usuario.getNombre());
 			System.out.print(
-					"1- Estudiar un concepto específico \n2- Estudiar temas aleatorios \n3- Subir de nivel de dificultad\n");
+					"1- Estudiar un concepto específico \n2- Estudiar temas aleatorios \n3- Subir de nivel de dificultad\n0- Salir\n");
 			actividad = read.nextInt();
-			System.out.println();
+			System.out.println(separador);
 
 			switch (actividad) {
 			case 1:
@@ -90,12 +92,12 @@ public class App {
 				System.out.println("Opción no disponible por el momento D:");
 				break;
 			case 0:
-				System.out.printf("Chau %s!! Nos vemos! u3u", usuario.getNombre());
+				System.out.printf("Chau %s!! Nos vemos! u3u\n", usuario.getNombre());
 				break;
 			default:
 				System.out.println("Opcion incorrecta");
 			}
-			System.out.println();
+			System.out.println(separador);
 		} while (actividad != 0);
 		
 		read.close();

@@ -97,7 +97,7 @@ public class LectorArchivos {
 			nroCapitulo = Integer.parseInt(arrDatos[0]);
 			nroConcepto = Integer.parseInt(arrDatos[1]);
 			nombre = arrDatos[2];
-			teoria = arrDatos[3].replace("\\n", "\n");
+			teoria = arrDatos[3].replace("\\n", "\n").replace("\\t", "\t");
 
 			// creamos un nuevo capitulo con los datos obtenidos de la linea
 			concept = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
@@ -136,7 +136,7 @@ public class LectorArchivos {
 			linea = sc.nextLine();
 
 			// separamos la linea segun el separador en un array
-			arrDatos = linea.split("X");
+			arrDatos = linea.split(",");
 
 			// parseamos los datos numericos y asignamos los datos a los parametros
 			// que le vamos a pasar al constructor
