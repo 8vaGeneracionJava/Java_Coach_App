@@ -20,7 +20,7 @@ package org.adaitw.generacion8va.application.mensajes;
 * .
 * CAPITULO 6
 * */
-public  class Mensaje {
+public class Mensaje {
     private String titulo;
     private String teoria;
 
