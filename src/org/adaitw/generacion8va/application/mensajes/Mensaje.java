@@ -31,5 +31,6 @@ public abstract class Mensaje {
 
 	public abstract void armarTituloMensaje();
 
+
 	public abstract void armarCuerpoMensaje();
 }
