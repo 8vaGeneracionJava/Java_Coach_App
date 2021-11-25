@@ -8,3 +8,5 @@
 2X2X8XOperadores aritm�ticosXint x=2+2;
 2X2X9XOperadores aritm�ticosXSystem.out.print(2*10);
 3X5X1Xlength() Y charAt ()XEl siguiente código muestra cómo usar charAt ():\nString string = "animales";\nSystem.out.println (string.charAt (0)); // a\n System.out.println (string.charAt (6)); // s\nSystem.out.println (string.charAt (7)); // lanza una excepción \nDado que los índices comienzan a contar con 0, charAt (0) devuelve el "primer" carácter en el secuencia.\n De manera similar, charAt (6) devuelve el "séptimo" carácter de la secuencia.\n charAt (7) es un problema. \n Pide el "octavo" carácter en la secuencia, pero solo hay siete personajes presentes. Cuando algo sale mal y Java no sabe cómo solucionarlo,lanza una excepción, como se muestra aquí.
+3X12X4 System.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
+3X13X2 System.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
