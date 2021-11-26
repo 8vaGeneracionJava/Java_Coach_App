@@ -13,16 +13,21 @@ public class Capitulo {
 		this.nroCapitulo = nroCapitulo;
 		this.nombre = nombre;
 		this.conceptos = new ArrayList<Concepto>();
-		this.conceptos.add(null);
 		this.dificultad = dificultad;
 	}
 
 	public void agregarConcepto(Concepto concepto, int nroConcepto) {
-		this.conceptos.add(nroConcepto, concepto);
+		this.conceptos.add(concepto);
 	}
 
 	public Concepto seleccionarConceptoNro(int nroConcepto) {
-		return this.conceptos.get(nroConcepto);
+		// return this.conceptos.get(nroConcepto);
+		for(Concepto c : conceptos) {
+			if (nroConcepto == c.getNroConcepto()){
+				return c;
+			}
+		}
+		return null;
 	}
 
 	public Concepto seleccionarConceptoAleatorio() {

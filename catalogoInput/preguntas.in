@@ -1,6 +1,6 @@
-1,6,1,Con cu·l de los siguientes caracteres puedo importar todas las clases de un paquete?,3,1) \n,2) *,3) (),2
-1,7,2,Cu·l de los siguientes ejemplos es considerado una declaraciÛn de importaciÛn redundante?,3,1) import java.util.Date;,2) import java.lang.System;,3) import java.util.Scanner;,2
+1,6,1,Con cu√°l de los siguientes caracteres puedo importar todas las clases de un paquete?,3,1) \n,2) *,3) (),2
+1,7,2,Cu√°l de los siguientes ejemplos es considerado una declaraci√≥n de importaci√≥n redundante?,3,1) import java.util.Date;,2) import java.lang.System;,3) import java.util.Scanner;,2
 1,9,3,Que palabra clave se utiliza para generar paquetes en java?,3,1) Package,2) Packages,3) Ambas son correctas,1
-2,1,4,A que tipo de operador corresponde la siguiente expresiÛn: int x= 2*(32-8)?,3, 1) Operador ternario,2) Operador binario,3) Operador unario,2
-2,2,5,Cu·l de los siguientes ejemplos es un operador aritmÈtico?,3,1) /,2) ;,3) 0,1
-2,3,6,QuÈ tipo de dato ser· x*y? int x=1; long y=33;,3,1) int,2) long,3) double,2
+2,1,4,A que tipo de operador corresponde la siguiente expresi√≥n: int x= 2*(32-8)?,3, 1) Operador ternario,2) Operador binario,3) Operador unario,2
+2,2,5,Cu√°l de los siguientes ejemplos es un operador aritmtico?,3,1) /,2) ;,3) 0,1
+2,3,6,Qu√© tipo de dato ser√° x*y? int x=1; long y=33;,3,1) int,2) long,3) double,2
