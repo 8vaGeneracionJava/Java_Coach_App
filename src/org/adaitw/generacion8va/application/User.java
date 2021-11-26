@@ -9,6 +9,13 @@ public class User {
         this.nivel = nivel;
     }
 
+    // Metodo para notificar al usuario
+    // Metodo para seleccionar tiempo de estudio
+    // Metodo de alerta (cuando pasa mucho tiempo sin estudiar)
+    // Metodo de seleccion de forma de recibir la alerta
+    // Metodo de evaluacion al final de cada capitulo
+    // Metodo de autoevaluacion de forma aleatoria
+
     public String nivelUsuarioAString() {
 		switch (nivel) {
 		case 1:
