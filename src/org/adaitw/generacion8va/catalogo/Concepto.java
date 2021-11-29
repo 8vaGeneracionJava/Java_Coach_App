@@ -16,10 +16,8 @@ public class Concepto {
 		this.nroConcepto = nroConcepto;
 		this.nombre = nombre;
 		this.teoria = teoria;
-		this.preguntas = new ArrayList<Pregunta>(50);
-		this.preguntas.add(null);
-		this.ejemplos = new ArrayList<Ejemplo>(50);
-		this.ejemplos.add(null);
+		this.preguntas = new ArrayList<Pregunta>();
+		this.ejemplos = new ArrayList<Ejemplo>();
 	}
 
 	public void agregarPregunta(Pregunta pregunta, int nroPregunta) {
@@ -99,7 +97,7 @@ public class Concepto {
 		System.out.println(this);
 		System.out.println("----------------------------------");
 		System.out.println(this.teoria);
-		System.out.printf("[Capítulo %02d | Concepto %02d]\n\n", this.nroCapitulo, this.nroConcepto);
+		System.out.printf("[Capï¿½tulo %02d | Concepto %02d]\n\n", this.nroCapitulo, this.nroConcepto);
 
 	}
 

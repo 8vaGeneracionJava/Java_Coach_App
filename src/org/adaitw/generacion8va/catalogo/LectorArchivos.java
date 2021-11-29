@@ -9,8 +9,8 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
- * Clase que se ocupa de hacer el ingreso del material teórico guardado en
- * archivos a la aplicación
+ * Clase que se ocupa de hacer el ingreso del material teï¿½rico guardado en
+ * archivos a la aplicaciï¿½n
  */
 public class LectorArchivos {
 
@@ -18,7 +18,7 @@ public class LectorArchivos {
 
 	public LectorArchivos() throws FileNotFoundException {
 		super();
-		capitulos = new TreeMap<Integer, Capitulo>();
+		this.capitulos = new TreeMap<Integer, Capitulo>();
 		this.leerCapitulos();
 		this.leerConceptos();
 		this.leerPreguntas();
@@ -58,7 +58,7 @@ public class LectorArchivos {
 			cap = new Capitulo(nroCapitulo, nombre, nivel);
 
 			// actualizamos el mapa
-			capitulos.put(nroCapitulo, cap);
+			this.capitulos.put(nroCapitulo, cap);
 
 		}
 
@@ -102,7 +102,7 @@ public class LectorArchivos {
 			// creamos un nuevo capitulo con los datos obtenidos de la linea
 			concept = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
 
-			// añadimos el concepto MODIFICAR PARA MEJOR LECTURA
+			// aï¿½adimos el concepto MODIFICAR PARA MEJOR LECTURA
 			if (capitulos.containsKey(nroCapitulo)) {
 				capitulos.get(nroCapitulo).agregarConcepto(concept, nroConcepto);
 			}
@@ -158,8 +158,13 @@ public class LectorArchivos {
 			// creamos un nuevo pregunta con los datos obtenidos de la linea
 			preg = new Pregunta(nroCapitulo, nroConcepto, nroPregunta, pregunta, respuestas, respuestaCorrecta);
 
-			// añadimos la pregunta MODIFICAR PARA MEJOR LECTURA
-			capitulos.get(nroCapitulo).getConceptos().get(nroConcepto).agregarPregunta(preg, nroPregunta);
+			// aï¿½adimos la pregunta MODIFICAR PARA MEJOR LECTURA
+
+			Capitulo cptlAux = capitulos.get(nroCapitulo);
+			Concepto cptoAux = cptlAux.seleccionarConceptoNro(nroConcepto);
+			if (cptoAux != null) {
+				cptoAux.agregarPregunta(preg, nroPregunta);
+			}
 		}
 
 		// cerramos el lector
@@ -202,8 +207,13 @@ public class LectorArchivos {
 			// creamos un nuevo pregunta con los datos obtenidos de la linea
 			ejemplo = new Ejemplo(nroCapitulo, nroConcepto, nroEjemplo, ejempStr, descrip);
 
-			// añadimos la pregunta MODIFICAR PARA MEJOR LECTURA
-			capitulos.get(nroCapitulo).getConceptos().get(nroConcepto).agregarEjemplo(ejemplo, nroEjemplo);
+			// aï¿½adimos la pregunta MODIFICAR PARA MEJOR LECTURA
+			Capitulo cptlAux = capitulos.get(nroCapitulo);
+			Concepto cptoAux = cptlAux.seleccionarConceptoNro(nroConcepto);
+			if (cptoAux != null) {
+				cptoAux.agregarEjemplo(ejemplo, nroEjemplo);
+			}
+
 		}
 
 		// cerramos el lector
