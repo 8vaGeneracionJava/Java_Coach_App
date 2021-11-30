@@ -1,3 +1,5 @@
+1,1,1,¿Que son los atributos?, 3, 1)Son las características que da la clase, 2)Son las operaciones que realiza la clase, 3)Son las instancias de una clase, 1
+1,2,1,¿Cuál es la forma correcta de crear un método?, 3, 1) nombreClase(método){lista Parámetros}, 2)tipo-retorno nombreClase{//Cuerpo del método}, 3)tipo-retorno nombreClase(lista parámetros){Cuerpo del método}, 3
 1,6,1,Con cuál de los siguientes caracteres puedo importar todas las clases de un paquete?,3,1) \n,2) *,3) (),2
 1,7,2,Cuál de los siguientes ejemplos es considerado una declaración de importación redundante?,3,1) import java.util.Date;,2) import java.lang.System;,3) import java.util.Scanner;,2
 1,9,3,Que palabra clave se utiliza para generar paquetes en java?,3,1) Package,2) Packages,3) Ambas son correctas,1
