@@ -1,5 +1,5 @@
-1x1x1xAtributosx1: public class Animal { String name; }
-1x2x1xMetodosxpublic String getName() { return name; }\n public void setName(String newName)\n {name = newName;}
+1X1X1XAtributosX1: public class Animal { String name; }
+1X2X1XMetodosXpublic String getName() { return name; }\n public void setName(String newName)\n {name = newName;}
 1X6X2XComodinesXimport java.util.*;
 1X7X3XImportaciones redundantesXimport java.util.*; import java.util.Random;
 1X7X4XImportaciones redundantesXimport java.lang.*;
