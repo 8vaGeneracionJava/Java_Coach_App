@@ -12,6 +12,10 @@
 3X5X1Xlength() Y charAt ()XEl siguiente código muestra cómo usar charAt ():\nString string = "animales";\nSystem.out.println (string.charAt (0)); // a\n System.out.println (string.charAt (6)); // s\nSystem.out.println (string.charAt (7)); // lanza una excepción \nDado que los índices comienzan a contar con 0, charAt (0) devuelve el "primer" carácter en el secuencia.\n De manera similar, charAt (6) devuelve el "séptimo" carácter de la secuencia.\n charAt (7) es un problema. \n Pide el "octavo" carácter en la secuencia, pero solo hay siete personajes presentes. Cuando algo sale mal y Java no sabe cómo solucionarlo,lanza una excepción, como se muestra aquí.
 3X12X4XEjemplo 4XSystem.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
 3X13X2XEjemplo 2XSystem.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
+3X14X1Xreplace()Xchar parameters:System.out.println("abcabc".replace('a', 'A')); // AbcAbc
+3X14X2Xreplace()XString parameters:System.out.println("abcabc".replace("a", "A")); // AbcAbc
+3X15X1Xtrim()XSystem.out.println("abc".trim()); // abc
+3X15X2Xtrim()XSystem.out.println("\t a b c\n".trim()); // a b c
 5X1X1XHerenciaX Loro y águila hereda de Pajaro,\n murcielago y tigre hereda de mamíferos\n mamíferos y pájaros hereda de Animal;
 5X1X2XHerenciaXlas clases caniche y siberiano hereda de Perro\nLa clase perro puede heredar de las clases animal y mascota;
 5X2X1Xextension de la claseX Public class Lion extends Animal {\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n};
