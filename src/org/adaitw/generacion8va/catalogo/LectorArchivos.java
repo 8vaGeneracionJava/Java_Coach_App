@@ -43,8 +43,10 @@ public class LectorArchivos {
 
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
-
 			try {
+
+				manExc.sumarLinea();
+				
 				// guardamos la linea en un string
 				linea = sc.nextLine(); // "1;Fundamentos;Basico"
 
@@ -63,7 +65,6 @@ public class LectorArchivos {
 				// actualizamos el mapa
 				this.capitulos.put(nroCapitulo, cap);
 
-				manExc.sumarLinea();
 
 			} catch (ArrayIndexOutOfBoundsException e) {
 				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
@@ -101,6 +102,9 @@ public class LectorArchivos {
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
 			try {
+
+				manExc.sumarLinea();
+				
 				// guardamos la linea en un string
 				linea = sc.nextLine(); // "1;1;Atributos;Los atributos, tambien llamad..."
 
@@ -121,7 +125,6 @@ public class LectorArchivos {
 
 				capitulos.get(nroCapitulo).agregarConcepto(concept, nroConcepto);
 
-				manExc.sumarLinea();
 
 			} catch (ArrayIndexOutOfBoundsException e) {
 				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
@@ -161,6 +164,9 @@ public class LectorArchivos {
 		while (sc.hasNext()) {
 
 			try {
+
+				manExc.sumarLinea();
+				
 				// guardamos la linea en un string
 				linea = sc.nextLine();
 
@@ -194,7 +200,6 @@ public class LectorArchivos {
 
 				cptoAux.agregarPregunta(preg, nroPregunta);
 
-				manExc.sumarLinea();
 
 			} catch (ArrayIndexOutOfBoundsException e) {
 				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
@@ -235,6 +240,8 @@ public class LectorArchivos {
 		while (sc.hasNext()) {
 
 			try {
+				manExc.sumarLinea();
+				
 				// guardamos la linea en un string
 				linea = sc.nextLine();
 
@@ -257,8 +264,7 @@ public class LectorArchivos {
 				Concepto cptoAux = cptlAux.seleccionarConceptoNro(nroConcepto);
 
 				cptoAux.agregarEjemplo(ejemplo, nroEjemplo);
-
-				manExc.sumarLinea();
+				
 
 			} catch (ArrayIndexOutOfBoundsException e) {
 				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
@@ -325,7 +331,7 @@ class ManejadorExcepciones {
 	
 	ManejadorExcepciones(String rutaArchivo) {
 		this.rutaArchivo = rutaArchivo;
-		this.nroLineaArch = 1;
+		this.nroLineaArch = 0;
 	}
 	
 	void sumarLinea() {
