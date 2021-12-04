@@ -1,11 +1,13 @@
 1,1,1,¿Que son los atributos?,3, 1)Son las características que da la clase, 2)Son las operaciones que realiza la clase, 3)Son las instancias de una clase,1
 1,2,1,¿Cuál es la forma correcta de crear un método?,3, 1) nombreClase(método){lista Parámetros}, 2)tipo-retorno nombreClase{//Cuerpo del método}, 3)tipo-retorno nombreClase(lista parámetros){Cuerpo del método},3
 1,6,1,Con cuál de los siguientes caracteres puedo importar todas las clases de un paquete?,3,1) \n,2) *,3) (),2
-1,7,2,Cuál de los siguientes ejemplos es considerado una declaración de importación redundante?,3,1) import java.util.Date;,2) import java.lang.System;,3) import java.util.Scanner;,2
-1,9,3,Que palabra clave se utiliza para generar paquetes en java?,3,1) Package,2) Packages,3) Ambas son correctas,1
-2,1,4,A que tipo de operador corresponde la siguiente expresión: int x= 2*(32-8)?,3, 1) Operador ternario,2) Operador binario,3) Operador unario,2
-2,2,5,Cuál de los siguientes ejemplos es un operador aritmtico?,3,1) /,2) ;,3) 0,1
-2,3,6,Qué tipo de dato será x*y? int x=1; long y=33;,3,1) int,2) long,3) double,2
+1,7,1,Cuál de los siguientes ejemplos es considerado una declaración de importación redundante?,3,1) import java.util.Date;,2) import java.lang.System;,3) import java.util.Scanner;,2
+1,9,1,Que palabra clave se utiliza para generar paquetes en java?,3,1) Package,2) Packages,3) Ambas son correctas,1
+2,1,1,A que tipo de operador corresponde la siguiente expresión: int x= 2*(32-8)?,3, 1) Operador ternario,2) Operador binario,3) Operador unario,2
+2,2,1,Cuál de los siguientes ejemplos es un operador aritmtico?,3,1) /,2) ;,3) 0,1
+2,3,1,Qué tipo de dato será x*y? int x=1; long y=33;,3,1) int,2) long,3) double,2
+2,9,1,Cuál es el límite ifs que puedo tener anidados?,3,1) 8,2) 64,3) No hay límite,3
+2,10,1,Elige el valor de x para que se ejecute el bloque else:\nif (x<4){\n\t...\n} else {\n\t...\n},3,1) 1,2) 4,3) -1,2
 3,14,1,Que tipo de parámetros usa la siguiente sentencia? String myString = "__x___x___x_x____xx_";\n char oldChar = 'x';\n char newChar = 'o';\n String newString = myString.replace(oldChar newChar);// __o___o___o_o____oo_;,3,1)String ,2)char ,3)Ambas son correctas ,2
 3,15,1,Para que se utiliza el método trim() en Java?,3,1)Eliminar espacios en blanco en ambos extremos de la cadena,2)Reemplazar espacios de la cadena,3)Eliminar espacios y caracteres especiales dentro de la cadena,1
 5,1,1,todas las clases heredan de…,3,1)clase hija,2)clase padre,3) clase Object,3
