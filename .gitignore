@@ -8,9 +8,23 @@
 *.ctxt
 
 # IDEA files
-#*.iml
-#.idea/*
-#out/
+*.iml
+.idea/*
+out/
+
+# Eclipse
+.metadata/*
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
