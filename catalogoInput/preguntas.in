@@ -10,5 +10,7 @@
 2,10,1,Elige el valor de x para que se ejecute el bloque else:\nif (x<4){\n\t...\n} else {\n\t...\n},3,1) 1,2) 4,3) -1,2
 3,14,1,Que tipo de parámetros usa la siguiente sentencia? String myString = "__x___x___x_x____xx_";\n char oldChar = 'x';\n char newChar = 'o';\n String newString = myString.replace(oldChar newChar);// __o___o___o_o____oo_;,3,1)String ,2)char ,3)Ambas son correctas ,2
 3,15,1,Para que se utiliza el método trim() en Java?,3,1)Eliminar espacios en blanco en ambos extremos de la cadena,2)Reemplazar espacios de la cadena,3)Eliminar espacios y caracteres especiales dentro de la cadena,1
+4,5,1,¿Cuál de los siguientes ejemplos esta expresado correctamente?,2,1)public void 2walk() { } ,2)public void walk2() { },2
+4,6,1,¿Cuál de los siguientes ejemplos es correcto?,2,1)public void walk4(int a; int b) { } ,2)public void walk4(int a, int b) { },2
 5,1,1,todas las clases heredan de…,3,1)clase hija,2)clase padre,3) clase Object,3
 5,2,1,Es correcta? public class Animal extends Lion{\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n},2,1)F,2)V,1

@@ -18,6 +18,10 @@
 3X14X2Xreplace()XString parameters:System.out.println("abcabc".replace("a", "A")); // AbcAbc
 3X15X1Xtrim()XSystem.out.println("abc".trim()); // abc
 3X15X2Xtrim()XSystem.out.println("\t a b c\n".trim()); // a b c
+4X5X1XNombre de los métodosX1:public void walk1() { }
+4X5X2XNombre de los métodosX2:public void Walk_$() { }
+4X6X1XLista de parámetrosX1:public void walk1() { }
+4X6X2XLista de parámetrosX2:public void walk2(int a, int b) { }
 5X1X1XHerenciaX Loro y águila hereda de Pajaro,\n murcielago y tigre hereda de mamíferos\n mamíferos y pájaros hereda de Animal;
 5X1X2XHerenciaXlas clases caniche y siberiano hereda de Perro\nLa clase perro puede heredar de las clases animal y mascota;
 5X2X1Xextension de la claseX Public class Lion extends Animal {\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n};
