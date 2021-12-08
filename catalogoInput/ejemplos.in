@@ -1,12 +1,28 @@
+1X1X1XAtributosX1: public class Animal { String name; }
+1X2X1XMetodosXpublic String getName() { return name; }\n public void setName(String newName)\n {name = newName;}
+1X6X1XComodinesXimport java.util.*;
+1X7X1XImportaciones redundantesXimport java.util.*; import java.util.Random;
+1X7X2XImportaciones redundantesXimport java.lang.*;
+1X8X1XConflicto de nombresXUtilizar la clase Date: import java.util.*; import java.sql.*; //no compila ya que la clase Date se encuentra en ambos paquetes. Soluci�n: import java.util.Date; import java.sql.*;
+1X9X1XPaquetesXpackage adaitw
+2X1X1XOperadoresXi++ //Operador unario. a==b //operador binario. resultado=(condicion)? valor1: valor2; //Operador ternario.
+2X2X1XOperadores aritm�ticosXint x=2+2;
+2X2X2XOperadores aritm�ticosXSystem.out.print(2*10);
+2X9X1XDeclaración ifXif(hourOfDay < 11) {\n\tSystem.out.println("Good Morning");\n}
+2X10X1XDeclaración if-elseXif(hourOfDay < 11) {\n\tSystem.out.println("Good Morning");\n} else {\n\tSystem.out.println("Good Afternoon");\n}
 3X2X1XconcatenacionXSystem.out.println (1 + 2); // 3 Ambos operandos son numeros,por lo que usamos la suma normal\nSystem.out.println ("a" + "b"); // ab   es una concatenacion de cadenas simples.\n System.out.println ("a" + "b" + 3); // ab3 primero se ejecutar "a"+"b" y luego la restante 3.\nSystem.out.println (1 + 2 + "c"); // 3c  Ambos operandos son num�ricos se suman 3 y se concatena con C\n
-1X6X2XComodinesXimport java.util.*;
-1X7X3XImportaciones redundantesXimport java.util.*; import java.util.Random;
-1X7X4XImportaciones redundantesXimport java.lang.*;
-1X8X5XConflicto de nombresXUtilizar la clase Date: import java.util.*; import java.sql.*; //no compila ya que la clase Date se encuentra en ambos paquetes. Soluci�n: import java.util.Date; import java.sql.*;
-1X9X6XPaquetesXpackage adaitw
-2X1X7XOperadoresXi++ //Operador unario. a==b //operador binario. resultado=(condicion)? valor1: valor2; //Operador ternario.
-2X2X8XOperadores aritm�ticosXint x=2+2;
-2X2X9XOperadores aritm�ticosXSystem.out.print(2*10);
 3X5X1Xlength() Y charAt ()XEl siguiente código muestra cómo usar charAt ():\nString string = "animales";\nSystem.out.println (string.charAt (0)); // a\n System.out.println (string.charAt (6)); // s\nSystem.out.println (string.charAt (7)); // lanza una excepción \nDado que los índices comienzan a contar con 0, charAt (0) devuelve el "primer" carácter en el secuencia.\n De manera similar, charAt (6) devuelve el "séptimo" carácter de la secuencia.\n charAt (7) es un problema. \n Pide el "octavo" carácter en la secuencia, pero solo hay siete personajes presentes. Cuando algo sale mal y Java no sabe cómo solucionarlo,lanza una excepción, como se muestra aquí.
-3X14X1Xreplace()XSystem.out.println("abcabc".replace('a', 'A')); // AbcAbc.
-3X15X1Xtrim()XSystem.out.println("\t a b c\n".trim()); // a b c.
+3X12X4XEjemplo 4XSystem.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
+3X13X2XEjemplo 2XSystem.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
+3X14X1Xreplace()Xchar parameters:System.out.println("abcabc".replace('a', 'A')); // AbcAbc
+3X14X2Xreplace()XString parameters:System.out.println("abcabc".replace("a", "A")); // AbcAbc
+3X15X1Xtrim()XSystem.out.println("abc".trim()); // abc
+3X15X2Xtrim()XSystem.out.println("\t a b c\n".trim()); // a b c
+4X5X1XNombre de los métodosX1:public void walk1() { }
+4X5X2XNombre de los métodosX2:public void Walk_$() { }
+4X6X1XLista de parámetrosX1:public void walk1() { }
+4X6X2XLista de parámetrosX2:public void walk2(int a, int b) { }
+5X1X1XHerenciaX Loro y águila hereda de Pajaro,\n murcielago y tigre hereda de mamíferos\n mamíferos y pájaros hereda de Animal;
+5X1X2XHerenciaXlas clases caniche y siberiano hereda de Perro\nLa clase perro puede heredar de las clases animal y mascota;
+5X2X1Xextension de la claseX Public class Lion extends Animal {\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n};
+

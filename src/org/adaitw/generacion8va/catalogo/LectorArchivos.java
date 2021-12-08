@@ -9,8 +9,8 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
- * Clase que se ocupa de hacer el ingreso del material teórico guardado en
- * archivos a la aplicación
+ * Clase que se ocupa de hacer el ingreso del material teï¿½rico guardado en
+ * archivos a la aplicaciï¿½n
  */
 public class LectorArchivos {
 
@@ -18,7 +18,7 @@ public class LectorArchivos {
 
 	public LectorArchivos() throws FileNotFoundException {
 		super();
-		capitulos = new TreeMap<Integer, Capitulo>();
+		this.capitulos = new TreeMap<Integer, Capitulo>();
 		this.leerCapitulos();
 		this.leerConceptos();
 		this.leerPreguntas();
@@ -38,27 +38,41 @@ public class LectorArchivos {
 		String nombre;
 		String nivel;
 		Capitulo cap;
+		// creamos una instancia del manejador de excepciones
+		ManejadorExcepciones manExc = new ManejadorExcepciones(archivo.getPath());
 
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
+			try {
 
-			// guardamos la linea en un string
-			linea = sc.nextLine(); // "1;Fundamentos;Basico"
+				manExc.sumarLinea();
+				
+				// guardamos la linea en un string
+				linea = sc.nextLine(); // "1;Fundamentos;Basico"
 
-			// separamos la linea segun el separador en un array
-			arrDatos = linea.split(";"); // ["1", "Fundamentos", "Basico"]
+				// separamos la linea segun el separador en un array
+				arrDatos = linea.split(";"); // ["1", "Fundamentos", "Basico"]
 
-			// parseamos los datos numericos y asignamos los datos a los parametros
-			// que le vamos a pasar al constructor
-			nroCapitulo = Integer.parseInt(arrDatos[0]);
-			nombre = arrDatos[1];
-			nivel = arrDatos[2];
+				// parseamos los datos numericos y asignamos los datos a los parametros
+				// que le vamos a pasar al constructor
+				nroCapitulo = Integer.parseInt(arrDatos[0]);
+				nombre = arrDatos[1];
+				nivel = arrDatos[2];
 
-			// creamos un nuevo capitulo con los datos obtenidos de la linea
-			cap = new Capitulo(nroCapitulo, nombre, nivel);
+				// creamos un nuevo capitulo con los datos obtenidos de la linea
+				cap = new Capitulo(nroCapitulo, nombre, nivel);
 
-			// actualizamos el mapa
-			capitulos.put(nroCapitulo, cap);
+				// actualizamos el mapa
+				this.capitulos.put(nroCapitulo, cap);
+
+
+			} catch (ArrayIndexOutOfBoundsException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
+			} catch (NumberFormatException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No se puede convertir a numero");
+			} catch (Exception e) {
+				manExc.mostrarMensajeExcepcion(e,e.getMessage());
+			}
 
 		}
 
@@ -82,29 +96,44 @@ public class LectorArchivos {
 		String nombre;
 		String teoria;
 		Concepto concept;
+		// creamos una instancia del manejador de excepciones
+		ManejadorExcepciones manExc = new ManejadorExcepciones(archivo.getPath());
 
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
+			try {
 
-			// guardamos la linea en un string
-			linea = sc.nextLine(); // "1;1;Atributos;Los atributos, tambien llamad..."
+				manExc.sumarLinea();
+				
+				// guardamos la linea en un string
+				linea = sc.nextLine(); // "1;1;Atributos;Los atributos, tambien llamad..."
 
-			// separamos la linea segun el separador en un array
-			arrDatos = linea.split(";"); // ["1", "1", "Atributos", "Los atributos, tambien llamad..."]
+				// separamos la linea segun el separador en un array
+				arrDatos = linea.split(";"); // ["1", "1", "Atributos", "Los atributos, tambien llamad..."]
 
-			// parseamos los datos numericos y asignamos los datos a los parametros
-			// que le vamos a pasar al constructor
-			nroCapitulo = Integer.parseInt(arrDatos[0]);
-			nroConcepto = Integer.parseInt(arrDatos[1]);
-			nombre = arrDatos[2];
-			teoria = arrDatos[3].replace("\\n", "\n").replace("\\t", "\t");
+				// parseamos los datos numericos y asignamos los datos a los parametros
+				// que le vamos a pasar al constructor
+				nroCapitulo = Integer.parseInt(arrDatos[0]);
+				nroConcepto = Integer.parseInt(arrDatos[1]);
+				nombre = arrDatos[2];
+				teoria = arrDatos[3].replace("\\n", "\n").replace("\\t", "\t");
 
-			// creamos un nuevo capitulo con los datos obtenidos de la linea
-			concept = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
+				// creamos un nuevo capitulo con los datos obtenidos de la linea
+				concept = new Concepto(nroCapitulo, nroConcepto, nombre, teoria);
 
-			// añadimos el concepto MODIFICAR PARA MEJOR LECTURA
-			if (capitulos.containsKey(nroCapitulo)) {
+				// aï¿½adimos el concepto MODIFICAR PARA MEJOR LECTURA
+
 				capitulos.get(nroCapitulo).agregarConcepto(concept, nroConcepto);
+
+
+			} catch (ArrayIndexOutOfBoundsException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
+			} catch (NumberFormatException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No se puede convertir a numero");
+			} catch (NullPointerException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No existe ese CapÃ­tulo");
+			} catch (Exception e) {
+				manExc.mostrarMensajeExcepcion(e,e.getMessage());
 			}
 		}
 
@@ -128,38 +157,60 @@ public class LectorArchivos {
 		int cantidadRespuestas;
 		String[] respuestas;
 		Pregunta preg;
+		// creamos una instancia del manejador de excepciones
+		ManejadorExcepciones manExc = new ManejadorExcepciones(archivo.getPath());
 
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
 
-			// guardamos la linea en un string
-			linea = sc.nextLine();
+			try {
 
-			// separamos la linea segun el separador en un array
-			arrDatos = linea.split(",");
+				manExc.sumarLinea();
+				
+				// guardamos la linea en un string
+				linea = sc.nextLine();
 
-			// parseamos los datos numericos y asignamos los datos a los parametros
-			// que le vamos a pasar al constructor
-			nroCapitulo = Integer.parseInt(arrDatos[0]);
-			nroConcepto = Integer.parseInt(arrDatos[1]);
-			nroPregunta = Integer.parseInt(arrDatos[2]);
-			pregunta = arrDatos[3];
-			cantidadRespuestas = Integer.parseInt(arrDatos[4]);
-			respuestas = new String[cantidadRespuestas];
+				// separamos la linea segun el separador en un array
+				arrDatos = linea.split(",");
 
-			int contador = 0;
-			for (int i = 5; i < (5 + cantidadRespuestas); i++) {
-				respuestas[contador] = arrDatos[i];
-				contador++;
+				// parseamos los datos numericos y asignamos los datos a los parametros
+				// que le vamos a pasar al constructor
+				nroCapitulo = Integer.parseInt(arrDatos[0]);
+				nroConcepto = Integer.parseInt(arrDatos[1]);
+				nroPregunta = Integer.parseInt(arrDatos[2]);
+				pregunta = arrDatos[3];
+				cantidadRespuestas = Integer.parseInt(arrDatos[4]);
+				respuestas = new String[cantidadRespuestas];
+
+				int contador = 0;
+				for (int i = 5; i < (5 + cantidadRespuestas); i++) {
+					respuestas[contador] = arrDatos[i];
+					contador++;
+				}
+
+				int respuestaCorrecta = Integer.parseInt(arrDatos[arrDatos.length - 1]);
+
+				// creamos un nuevo pregunta con los datos obtenidos de la linea
+				preg = new Pregunta(nroCapitulo, nroConcepto, nroPregunta, pregunta, respuestas, respuestaCorrecta);
+
+				// aï¿½adimos la pregunta MODIFICAR PARA MEJOR LECTURA
+
+				Capitulo cptlAux = capitulos.get(nroCapitulo);
+				Concepto cptoAux = cptlAux.seleccionarConceptoNro(nroConcepto);
+
+				cptoAux.agregarPregunta(preg, nroPregunta);
+
+
+			} catch (ArrayIndexOutOfBoundsException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
+			} catch (NumberFormatException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No se puede convertir a numero");
+			} catch (NullPointerException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No existe ese Concepto");
+			} catch (Exception e) {
+				manExc.mostrarMensajeExcepcion(e,e.getMessage());
 			}
 
-			int respuestaCorrecta = Integer.parseInt(arrDatos[arrDatos.length - 1]);
-
-			// creamos un nuevo pregunta con los datos obtenidos de la linea
-			preg = new Pregunta(nroCapitulo, nroConcepto, nroPregunta, pregunta, respuestas, respuestaCorrecta);
-
-			// añadimos la pregunta MODIFICAR PARA MEJOR LECTURA
-			capitulos.get(nroCapitulo).getConceptos().get(nroConcepto).agregarPregunta(preg, nroPregunta);
 		}
 
 		// cerramos el lector
@@ -167,6 +218,7 @@ public class LectorArchivos {
 	}
 
 	private void leerEjemplos() throws FileNotFoundException {
+
 		// creamos el archivo con su ruta
 		File archivo = new File("catalogoInput/ejemplos.in");
 		// creamos el scanner con ese archivo
@@ -181,29 +233,49 @@ public class LectorArchivos {
 		String ejempStr;
 		String descrip;
 		Ejemplo ejemplo;
+		// creamos una instancia del manejador de excepciones
+		ManejadorExcepciones manExc = new ManejadorExcepciones(archivo.getPath());
 
 		// recorremos el archivo mientras que el lector encuentre una siguiente linea
 		while (sc.hasNext()) {
 
-			// guardamos la linea en un string
-			linea = sc.nextLine();
+			try {
+				manExc.sumarLinea();
+				
+				// guardamos la linea en un string
+				linea = sc.nextLine();
 
-			// separamos la linea segun el separador en un array
-			arrDatos = linea.split("X");
+				// separamos la linea segun el separador en un array
+				arrDatos = linea.split("X");
 
-			// parseamos los datos numericos y asignamos los datos a los parametros
-			// que le vamos a pasar al constructor
-			nroCapitulo = Integer.parseInt(arrDatos[0]);
-			nroConcepto = Integer.parseInt(arrDatos[1]);
-			nroEjemplo = Integer.parseInt(arrDatos[2]);
-			ejempStr = arrDatos[3].replace("\\n", "\n");
-			descrip = arrDatos[4].replace("\\n", "\n");
+				// parseamos los datos numericos y asignamos los datos a los parametros
+				// que le vamos a pasar al constructor
+				nroCapitulo = Integer.parseInt(arrDatos[0]);
+				nroConcepto = Integer.parseInt(arrDatos[1]);
+				nroEjemplo = Integer.parseInt(arrDatos[2]);
+				ejempStr = arrDatos[3].replace("\\n", "\n");
+				descrip = arrDatos[4].replace("\\n", "\n");
 
-			// creamos un nuevo pregunta con los datos obtenidos de la linea
-			ejemplo = new Ejemplo(nroCapitulo, nroConcepto, nroEjemplo, ejempStr, descrip);
+				// creamos un nuevo pregunta con los datos obtenidos de la linea
+				ejemplo = new Ejemplo(nroCapitulo, nroConcepto, nroEjemplo, ejempStr, descrip);
 
-			// añadimos la pregunta MODIFICAR PARA MEJOR LECTURA
-			capitulos.get(nroCapitulo).getConceptos().get(nroConcepto).agregarEjemplo(ejemplo, nroEjemplo);
+				// aï¿½adimos la pregunta MODIFICAR PARA MEJOR LECTURA
+				Capitulo cptlAux = capitulos.get(nroCapitulo);
+				Concepto cptoAux = cptlAux.seleccionarConceptoNro(nroConcepto);
+
+				cptoAux.agregarEjemplo(ejemplo, nroEjemplo);
+				
+
+			} catch (ArrayIndexOutOfBoundsException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> Fijarse los separadores");
+			} catch (NumberFormatException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No se puede convertir a numero");
+			} catch (NullPointerException e) {
+				manExc.mostrarMensajeExcepcion(e,"-> No existe ese Concepto");
+			} catch (Exception e) {
+				manExc.mostrarMensajeExcepcion(e,e.getMessage());
+			}
+
 		}
 
 		// cerramos el lector
@@ -244,4 +316,32 @@ public class LectorArchivos {
 		return catalogo;
 	}
 
+}
+
+
+/**
+ * Se encarga de registrar en quÃ© lÃ­nea de quÃ© archivo
+ * ocurriÃ³ la excepciÃ³n y mostrar un mensaje descriptivo
+ * @author marys
+ *
+ */
+class ManejadorExcepciones {
+	int nroLineaArch;
+	String rutaArchivo;
+	
+	ManejadorExcepciones(String rutaArchivo) {
+		this.rutaArchivo = rutaArchivo;
+		this.nroLineaArch = 0;
+	}
+	
+	void sumarLinea() {
+		this.nroLineaArch++;
+	}
+	
+	void mostrarMensajeExcepcion(Exception e, String mensaje){
+		System.out.println(rutaArchivo + ": Linea " + nroLineaArch);
+		System.out.println(mensaje);
+		e.printStackTrace();
+	}
+	
 }

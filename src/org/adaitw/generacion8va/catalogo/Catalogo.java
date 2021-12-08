@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Clase encargada de almacenar nuestro catalogo y proporcionar los métodos
+ * Clase encargada de almacenar nuestro catalogo y proporcionar los mï¿½todos
  * necesarios para trabajar con el mismo
  * 
  * @author marys
@@ -56,15 +56,15 @@ public class Catalogo {
 	}
 
 	public Concepto seleccionarConceptoNro(int nroCap, int nroCon) {
-		return seleccionarListaConceptos(nroCap).get(nroCon);
+		return seleccionarCapituloNro(nroCap).seleccionarConceptoNro(nroCon);
 	}
 
 	public Ejemplo seleccionarEjemploNro(int nroCap, int nroCon, int nroEj) {
-		return seleccionarListaEjemplos(nroCap, nroCon).get(nroEj);
+		return seleccionarConceptoNro(nroCap, nroCon).seleccionarEjemploNro(nroEj);
 	}
 
 	public Pregunta seleccionarPreguntaNro(int nroCap, int nroCon, int nroPreg) {
-		return seleccionarListaPreguntas(nroCap, nroCon).get(nroPreg);
+		return seleccionarConceptoNro(nroCap, nroCon).seleccionarPreguntaNro(nroPreg);
 	}
 
 	/*
@@ -155,6 +155,14 @@ public class Catalogo {
 			}
 		}
 		System.out.println();
+	}
+
+	public TreeMap<Integer, Capitulo> getCapitulos() {
+		return capitulos;
+	}
+
+	public TreeMap<String, TreeMap<Integer, Capitulo>> getCatalogo() {
+		return catalogo;
 	}
 
 	/*

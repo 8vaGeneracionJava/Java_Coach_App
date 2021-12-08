@@ -13,12 +13,12 @@ public class App {
 		String separador = "*******************************************";
 
 		// INDICE CATALOGO COMPLETO
-		// catalogo.mostrarIndiceCompleto();
+		catalogo.mostrarIndiceCompleto();
 
 		Scanner read = new Scanner(System.in);
-		// MENÚ INICIAL
-		// Acá irá un método que muestre el mensaje de bienvenida
-		System.out.print("Bienvenido/a a Java Coach App! \nA continuación ingrese su nombre: \n");
+		// MENÃš INICIAL
+		// AcÃ¡ irÃ¡ un mÃ©todo que muestre el mensaje de bienvenida
+		System.out.print("Bienvenido/a a Java Coach App! \nA continuacin ingrese su nombre: \n");
 		String nombre = read.nextLine();
 		System.out.println(separador);
 
@@ -32,13 +32,13 @@ public class App {
 		int nivel;
 		switch (opcion) {
 		case 1:
-			System.out.println("Elija una de las opciones: \n 1- Básico \n 2- Intermedio \n 3- Avanzado");
+			System.out.println("Elija una de las opciones: \n 1- BÃ¡sico \n 2- Intermedio \n 3- Avanzado");
 			nivel = read.nextInt();
 			break;
 		case 2:
-			// Puse 1 como ejemplo pero acá irá el método que nos permita evaluar el
+			// Puse 1 como ejemplo pero acÃ¡ irÃ¡ el mÃ©todo que nos permita evaluar el
 			// conocimiento y retorne el nivel
-			System.out.println("Opción no disponible por el momento D:");
+			System.out.println("OpciÃ³n no disponible por el momento D:");
 			nivel = 1;
 			break;
 		default:
@@ -51,19 +51,19 @@ public class App {
 		User usuario = new User(nombre, nivel);
 		String nivelStr = usuario.nivelUsuarioAString();
 
-		// MENÚ ACTIVIDADES
+		// MENÃš ACTIVIDADES
 		// Se repite hasta q se ingrese 0
 		int actividad;
 		do {
-			System.out.printf("¿Qué te gustaría hacer hoy, %s?\n", usuario.getNombre());
+			System.out.printf("Â¿QuÃ© te gustarÃ­a hacer hoy, %s?\n", usuario.getNombre());
 			System.out.print(
-					"1- Estudiar un concepto específico \n2- Estudiar temas aleatorios \n3- Subir de nivel de dificultad\n0- Salir\n");
+					"1- Estudiar un concepto especÃ­fico \n2- Estudiar temas aleatorios \n3- Subir de nivel de dificultad\n0- Salir\n");
 			actividad = read.nextInt();
 			System.out.println(separador);
 
 			switch (actividad) {
 			case 1:
-				// 1- Estudiar un concepto específico
+				// 1- Estudiar un concepto especÃ­fico
 				catalogo.mostrarCapitulosPorNivel(nivelStr);
 				System.out.print("Elegir nro de Capitulo: ");
 				int nroCap = read.nextInt();
@@ -89,7 +89,7 @@ public class App {
 				// 3- Subir de nivel de dificultad
 				// tomarTestDeNivel()
 				// Setear nuevo nivel o mantener el anterior
-				System.out.println("Opción no disponible por el momento D:");
+				System.out.println("OpciÃ³n no disponible por el momento D:");
 				break;
 			case 0:
 				System.out.printf("Chau %s!! Nos vemos! u3u\n", usuario.getNombre());
