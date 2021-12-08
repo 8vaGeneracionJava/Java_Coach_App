@@ -1,6 +1,6 @@
 Este 2021 nos encontró en ADA:
 aprendiendo a codear, 
-trabajando en equipo, 
+trabajando en equipo, /MMartin
 colaborando con github, boni
 enseñando lo que sabemos, /nami
 aprendiendo lo que no, /Flor
