@@ -150,7 +150,17 @@ public class Catalogo {
 			System.out.println(cap);
 			for (Concepto c : conceptos) {
 				if (c != null) {
+					System.out.println("**********************************");
 					System.out.println("  " + c);
+					System.out.println("-------------------------------");
+					for(Pregunta p : c.getPreguntas()) {
+						System.out.println("  " + p);
+						System.out.println();
+					}
+					for(Ejemplo e : c.getEjemplos()) {
+						System.out.println("  " + e);
+						System.out.println();
+					}
 				}
 			}
 		}
