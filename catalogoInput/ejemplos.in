@@ -10,14 +10,6 @@
 2X2X2XOperadores aritm�ticosXSystem.out.print(2*10);
 2X9X1XDeclaración ifXif(hourOfDay < 11) {\n\tSystem.out.println("Good Morning");\n}
 2X10X1XDeclaración if-elseXif(hourOfDay < 11) {\n\tSystem.out.println("Good Morning");\n} else {\n\tSystem.out.println("Good Afternoon");\n}
-1X6X2XComodinesXimport java.util.*;
-1X7X3XImportaciones redundantesXimport java.util.*; import java.util.Random;
-1X7X4XImportaciones redundantesXimport java.lang.*;
-1X8X5XConflicto de nombresXUtilizar la clase Date: import java.util.*; import java.sql.*; //no compila ya que la clase Date se encuentra en ambos paquetes. Soluci�n: import java.util.Date; import java.sql.*;
-1X9X6XPaquetesXpackage adaitw
-2X1X7XOperadoresXi++ //Operador unario. a==b //operador binario. resultado=(condicion)? valor1: valor2; //Operador ternario.
-2X2X8XOperadores aritm�ticosXint x=2+2;
-2X2X9XOperadores aritm�ticosXSystem.out.print(2*10);
 2X11X1XSentencias de declaracionXint  bValue; // double  aValue = 8933.234; // String varCad;
 2X12X1XSentencias de ExpresionX valorA = 8933.234; asignación // valorA++; incremento // System.out.println(valorA); llamada a un método // Integer objInt = new Integer(4); creación de objetos.
 2X13X1XSentencias de Control de FlujoXPrograma java para ilustrar if // class IfDemo { public static void main(String args[]) { int i = 10; if (i > 15) System.out.println("10 es menor que 15"); // Esta declaración se ejecutará como si considerara una declaración por defecto //System.out.println("No estoy en IF");} }// salida; No estoy en if.
@@ -25,8 +17,8 @@
 2X13X3XSentencias de Control de FlujoXProgram de Java para ilustrar switch-case //class SwitchCaseDemo {public static void main(String args[]) { int i = 9; switch (i) {case 0: System.out.println("i es cero."); break; case 1: System.out.println("i es uno."); break; case 2: System.out.println("i es dos."); break; default: System.out.println("i es mayor que 2."); }}} // salida; i es mayor que 2.
 3X2X1XconcatenacionXSystem.out.println (1 + 2); // 3 Ambos operandos son numeros,por lo que usamos la suma normal\nSystem.out.println ("a" + "b"); // ab   es una concatenacion de cadenas simples.\n System.out.println ("a" + "b" + 3); // ab3 primero se ejecutar "a"+"b" y luego la restante 3.\nSystem.out.println (1 + 2 + "c"); // 3c  Ambos operandos son num�ricos se suman 3 y se concatena con C\n
 3X5X1Xlength() Y charAt ()XEl siguiente código muestra cómo usar charAt ():\nString string = "animales";\nSystem.out.println (string.charAt (0)); // a\n System.out.println (string.charAt (6)); // s\nSystem.out.println (string.charAt (7)); // lanza una excepción \nDado que los índices comienzan a contar con 0, charAt (0) devuelve el "primer" carácter en el secuencia.\n De manera similar, charAt (6) devuelve el "séptimo" carácter de la secuencia.\n charAt (7) es un problema. \n Pide el "octavo" carácter en la secuencia, pero solo hay siete personajes presentes. Cuando algo sale mal y Java no sabe cómo solucionarlo,lanza una excepción, como se muestra aquí.
-3X12X4XEjemplo 4XSystem.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
-3X13X2XEjemplo 2XSystem.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
+3X12X1XEjemplo 4XSystem.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
+3X13X1XEjemplo 2XSystem.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
 3X14X1Xreplace()Xchar parameters:System.out.println("abcabc".replace('a', 'A')); // AbcAbc
 3X14X2Xreplace()XString parameters:System.out.println("abcabc".replace("a", "A")); // AbcAbc
 3X15X1Xtrim()XSystem.out.println("abc".trim()); // abc
@@ -38,4 +30,3 @@
 5X1X1XHerenciaX Loro y águila hereda de Pajaro,\n murcielago y tigre hereda de mamíferos\n mamíferos y pájaros hereda de Animal;
 5X1X2XHerenciaXlas clases caniche y siberiano hereda de Perro\nLa clase perro puede heredar de las clases animal y mascota;
 5X2X1Xextension de la claseX Public class Lion extends Animal {\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n};
-
