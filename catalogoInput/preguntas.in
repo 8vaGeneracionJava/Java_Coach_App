@@ -1,22 +1,22 @@
-1X1X1X¿Que son los atributos?X3X 1)Son las características que da la claseX 2)Son las operaciones que realiza la claseX 3)Son las instancias de una claseX1
+1X1X1X¿Qué son los atributos?X3X 1)Son las características que da la claseX 2)Son las operaciones que realiza la claseX 3)Son las instancias de una claseX1
 1X2X1X¿Cuál es la forma correcta de crear un método?X3X 1) nombreClase(método){lista Parámetros}X 2)tipo-retorno nombreClase{//Cuerpo del método}X 3)tipo-retorno nombreClase(lista parámetros){Cuerpo del método}X3
-1X6X1XCon cuál de los siguientes caracteres puedo importar todas las clases de un paquete?X3X1) \nX2) *X3) ()X2
-1X7X1XCuál de los siguientes ejemplos es considerado una declaración de importación redundante?X3X1) import java.util.Date;X2) import java.lang.System;X3) import java.util.Scanner;X2
-1X9X1XQue palabra clave se utiliza para generar paquetes en java?X3X1) PackageX2) PackagesX3) Ambas son correctasX1
-2X1X1XA que tipo de operador corresponde la siguiente expresión: int x= 2*(32-8)?X3X 1) Operador ternarioX2) Operador binarioX3) Operador unarioX2
-2X2X1XCuál de los siguientes ejemplos es un operador aritmtico?X3X1) /X2) ;X3) 0X1
-2X3X1XQué tipo de dato será x*y? int x=1; long y=33;X3X1) intX2) longX3) doubleX2
-2X16X1XCuál es el límite ifs que puedo tener anidados?X3X1) 8X2) 64X3) No hay límiteX3
+1X6X1X¿Con cuál de los siguientes caracteres puedo importar todas las clases de un paquete?X3X1) \nX2) *X3) ()X2
+1X7X1X¿Cuál de los siguientes ejemplos es considerado una declaración de importación redundante?X3X1) import java.util.Date;X2) import java.lang.System;X3) import java.util.Scanner;X2
+1X9X1X¿Que palabra clave se utiliza para generar paquetes en java?X3X1) PackageX2) PackagesX3) Ambas son correctasX1
+2X1X1X¿A qué tipo de operador corresponde la siguiente expresión?: int x= 2*(32-8)?X3X 1) Operador ternarioX2) Operador binarioX3) Operador unarioX2
+2X2X1X¿Cuál de los siguientes ejemplos es un operador aritmtico?X3X1) /X2) ;X3) 0X1
+2X3X1X¿Qué tipo de dato será x*y? int x=1; long y=33;X3X1) intX2) longX3) doubleX2
+2X16X1X¿Cuál es el límite ifs que puedo tener anidados?X3X1) 8X2) 64X3) No hay límiteX3
 2X17X1XElige el valor de x para que se ejecute el bloque else:\nif (x<4){\n\t...\n} else {\n\t...\n}X3X1) 1X2) 4X3) -1X2
-3X6X1XSeg�n la siguiente cadena: \nString cadena="Estoy segura que Spiderman va a ser una gran pel�cula"; \n�Qu� valor va a retornar el siguiente m�todo cadena.indexOf("e", 5)?X3X1) 15X2) 7X 3) 0X2
-3X7X1XSi ejecuto el siguiente m�todo que valor se va a visualizar por pantalla. \nString cadena = "Electroencefalografista";\nSystem.out.println(cadena.substring(0, 7));X3X1) "Electro"X2)"Electroe"X3)"encefalografista"X1
-3X8X1XQu� m�todo usar�as para convertir todos los caracteres en min�scula?X3X1) .toLowerCamelCase()X2) .toLowerCase()X 3) .toCaseLower()X2
-3X9X1XQu� se imprimir� por pantalla si se usa .toUpperCase() en "hola mundo"?X3X 1) "HOLA MUNDO"X 2) "Hola mundo"X 3) "Hola Mundo"X1
-3X10X1XQu� valor devuelve el m�todo equals()?X3X1) BooleanX 2) intX 3) StringX1
-3X11X1XCu�l es el retorno: "abc".equalsIgnoreCase("ABC")?X3X 1) TrueX 2) FalseX 3) ABCX1
-3X14X1XQue tipo de parámetros usa la siguiente sentencia? String myString = "__x___x___x_x____xx_";\n char oldChar = 'x';\n char newChar = 'o';\n String newString = myString.replace(oldChar, newChar);// __o___o___o_o____oo_;X3X1)String X2)char X3)Ambas son correctas X2
-3X15X1XPara que se utiliza el método trim() en Java?X3X1)Eliminar espacios en blanco en ambos extremos de la cadenaX2)Reemplazar espacios de la cadenaX3)Eliminar espacios y caracteres especiales dentro de la cadenaX1
+3X6X1XSegún la siguiente cadena: \nString cadena="Estoy segura que Spiderman va a ser una gran película"; \n¿Qué valor va a retornar el siguiente método cadena.indexOf("e", 5)?X3X1) 15X2) 7X 3) 0X2
+3X7X1XSi ejecuto el siguiente método que valor se va a visualizar por pantalla. \nString cadena = "Electroencefalografista";\nSystem.out.println(cadena.substring(0, 7));X3X1) "Electro"X2)"Electroe"X3)"encefalografista"X1
+3X8X1X¿Qué método usarías para convertir todos los caracteres en minúscula?X3X1) .toLowerCamelCase()X2) .toLowerCase()X 3) .toCaseLower()X2
+3X9X1X¿Qué se imprimirá por pantalla si se usa .toUpperCase() en "hola mundo"?X3X 1) "HOLA MUNDO"X 2) "Hola mundo"X 3) "Hola Mundo"X1
+3X10X1X¿Qué valor devuelve el método equals()?X3X1) BooleanX 2) intX 3) StringX1
+3X11X1X¿Cuál es el retorno?: "abc".equalsIgnoreCase("ABC")?X3X 1) TrueX 2) FalseX 3) ABCX1
+3X14X1X¿Que tipo de parámetros usa la siguiente sentencia? String myString = "__x___x___x_x____xx_";\n char oldChar = 'x';\n char newChar = 'o';\n String newString = myString.replace(oldChar, newChar);// __o___o___o_o____oo_;X3X1)String X2)char X3)Ambas son correctas X2
+3X15X1X¿Para que se utiliza el método trim() en Java?X3X1)Eliminar espacios en blanco en ambos extremos de la cadenaX2)Reemplazar espacios de la cadenaX3)Eliminar espacios y caracteres especiales dentro de la cadenaX1
 4X5X1X¿Cuál de los siguientes ejemplos esta expresado correctamente?X2X1)public void 2walk() { } X2)public void walk2() { }X2
 4X6X1X¿Cuál de los siguientes ejemplos es correcto?X2X1)public void walk4(int a; int b) { } X2)public void walk4(int aX int b) { }X2
-5X1X1Xtodas las clases heredan de…X3X1)clase hijaX2)clase padreX3) clase ObjectX3
+5X1X1XTodas las clases heredan de…X3X1)clase hijaX2)clase padreX3) clase ObjectX3
 5X2X1XEs correcta? public class Animal extends Lion{\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n}X2X1)FX2)VX1
