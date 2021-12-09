@@ -2,8 +2,8 @@
 *   Guia de uso de Archivos   *
 *******************************
 
-.En esta carpeta se almacenarán los archivos que serán leidos por nuestra 
-aplicación cuando cargue sus datos al iniciar.
+.En esta carpeta se almacenarï¿½n los archivos que serï¿½n leidos por nuestra 
+aplicaciï¿½n cuando cargue sus datos al iniciar.
 .Se pueden editar en cualquier programa que abra archivos de texto simple 
 (bloc de notas por ej) o en el mismo IDE
 .Para hacer buen uso y no tener errores, por favor sigan esta estructura de
@@ -42,7 +42,7 @@ _| conceptos.in |_______________________________
 
   ______________
 _| preguntas.in |_______________________________
-[nroCapi:int],[nroConc:int],[nroPreg:int],[pre:String],[cantResp:int],[resp1:String],[resp2:String],[resp3:String],[nroRespCorrecta:int]
+[nroCapi:int]X[nroConc:int]X[nroPreg:int]X[pre:String]X[cantResp:int]X[resp1:String]X[resp2:String]X[resp3:String]X[nroRespCorrecta:int]
 
   ______________
 _| ejemplos.in  |_______________________________
