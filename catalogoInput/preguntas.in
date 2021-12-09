@@ -6,8 +6,8 @@
 2,1,1,A que tipo de operador corresponde la siguiente expresión: int x= 2*(32-8)?,3, 1) Operador ternario,2) Operador binario,3) Operador unario,2
 2,2,1,Cuál de los siguientes ejemplos es un operador aritmtico?,3,1) /,2) ;,3) 0,1
 2,3,1,Qué tipo de dato será x*y? int x=1; long y=33;,3,1) int,2) long,3) double,2
-2,9,1,Cuál es el límite ifs que puedo tener anidados?,3,1) 8,2) 64,3) No hay límite,3
-2,10,1,Elige el valor de x para que se ejecute el bloque else:\nif (x<4){\n\t...\n} else {\n\t...\n},3,1) 1,2) 4,3) -1,2
+2,16,1,Cuál es el límite ifs que puedo tener anidados?,3,1) 8,2) 64,3) No hay límite,3
+2,17,1,Elige el valor de x para que se ejecute el bloque else:\nif (x<4){\n\t...\n} else {\n\t...\n},3,1) 1,2) 4,3) -1,2
 3,6,1,Seg�n la siguiente cadena: \nString cadena="Estoy segura que Spiderman va a ser una gran pel�cula"; \n�Qu� valor va a retornar el siguiente m�todo cadena.indexOf("e" COMA 5)?,3,1) 15,2) 7, 3) 0,2
 3,7,1,Si ejecuto el siguiente m�todo que valor se va a visualizar por pantalla. \nString cadena = "Electroencefalografista";\nSystem.out.println(cadena.substring(0 COMA 7));,3,1) "Electro",2)"Electroe",3)"encefalografista",1
 3,8,1,Qu� m�todo usar�as para convertir todos los caracteres en min�scula?,3,1) .toLowerCamelCase(),2) .toLowerCase(), 3) .toCaseLower(),2
