@@ -38,3 +38,4 @@
 5X1X1XHerenciaX Loro y águila hereda de Pajaro,\n murcielago y tigre hereda de mamíferos\n mamíferos y pájaros hereda de Animal;
 5X1X2XHerenciaXlas clases caniche y siberiano hereda de Perro\nLa clase perro puede heredar de las clases animal y mascota;
 5X2X1Xextension de la claseX Public class Lion extends Animal {\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n};
+
