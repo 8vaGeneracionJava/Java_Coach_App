@@ -171,7 +171,7 @@ public class LectorArchivos {
 				linea = sc.nextLine();
 
 				// separamos la linea segun el separador en un array
-				arrDatos = linea.split(",");
+				arrDatos = linea.split("X");
 
 				// parseamos los datos numericos y asignamos los datos a los parametros
 				// que le vamos a pasar al constructor
