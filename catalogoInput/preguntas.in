@@ -20,3 +20,5 @@
 4X6X1X¿Cuál de los siguientes ejemplos es correcto?X2X1)public void walk4(int a; int b) { } X2)public void walk4(int aX int b) { }X2
 5X1X1XTodas las clases heredan de…X3X1)clase hijaX2)clase padreX3) clase ObjectX3
 5X2X1XEs correcta? public class Animal extends Lion{\n private void roar() {\nSystem.out.println("The "+getAge()+" year old lion says: Roar!");\n}\n}X2X1)FX2)VX1
+5X3X1X¿Qué modificadores se añaden implícitamente a todos los métodos de una interface?X6X1) protectedX2)publicX3) staticX4) voidX5) abstractX6) defaultX2
+6X1X1X¿Cuál de las siguientes afirmaciones es correcta?X5X1)Las excepciones de tiempo de ejecución son lo mismo que las excepciones chequeadasX2) Las Las excepciones de tiempo de ejecución son lo mismo que las excepciones no chequeadasX3) Podés declarar únicamente excepciones chequeadasX4) Podés declarar únicamente excepciones no chequeadasX5) Podés manejar únicamente subclases de ExcepciónX2
