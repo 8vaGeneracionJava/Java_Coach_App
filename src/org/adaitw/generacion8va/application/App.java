@@ -20,11 +20,14 @@ public class App {
 		// Acá irá un método que muestre el mensaje de bienvenida
 		System.out.print("Bienvenido/a a Java Coach App! \nA continuación ingrese su nombre: \n");
 		String nombre = read.nextLine();
+		System.out.print("Por favor ingrese su correo electronico:\n");
+		String mail = read.nextLine();
 		System.out.println(separador);
+
 
 		// Seleccion nivel
 		System.out.printf(
-				"Hola %s! \nAhora vamos a definir tu nivel de conocimientos: \n 1- Elegir mi nivel\n 2- Evaluar mi conocimiento actua\n",
+				"Hola %s! \nAhora vamos a definir tu nivel de conocimientos: \n 1- Elegir mi nivel\n 2- Evaluar mi conocimiento actual\n",
 				nombre);
 		int opcion = read.nextInt();
 		System.out.println(separador);
@@ -48,7 +51,7 @@ public class App {
 		System.out.println(separador);
 		
 		// Creacion usuario
-		User usuario = new User(nombre, nivel);
+		User usuario = new User(nombre, nivel, mail);
 		String nivelStr = usuario.nivelUsuarioAString();
 
 		// MENÚ ACTIVIDADES

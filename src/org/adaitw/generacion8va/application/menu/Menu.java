@@ -33,8 +33,8 @@ public class Menu {
 		case 2:
 			nivel = 1;
 		}
-
-		User usuario = new User(nombre, nivel);
+		String mail = "mail";
+		User usuario = new User(nombre, nivel,mail);
 		String nivelStr = usuario.nivelUsuarioAString();
 		
 		// MENÚ ACTIVIDADES
