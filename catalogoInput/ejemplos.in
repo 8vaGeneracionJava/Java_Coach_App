@@ -19,6 +19,9 @@
 3X5X1Xlength() Y charAt ()XEl siguiente código muestra cómo usar charAt ():\nString string = "animales";\nSystem.out.println (string.charAt (0)); // a\n System.out.println (string.charAt (6)); // s\nSystem.out.println (string.charAt (7)); // lanza una excepción \nDado que los índices comienzan a contar con 0, charAt (0) devuelve el "primer" carácter en el secuencia.\n De manera similar, charAt (6) devuelve el "séptimo" carácter de la secuencia.\n charAt (7) es un problema. \n Pide el "octavo" carácter en la secuencia, pero solo hay siete personajes presentes. Cuando algo sale mal y Java no sabe cómo solucionarlo,lanza una excepción, como se muestra aquí.
 3X6X1XindexOf()XPodría funcionar de la siguiente manera: String animal = "Elefantes"; \nSystem.out.println(animal.indexOf("e")); //2 \nSystem.out.println(animal.indexOf("an")); //4 \nSystem.out.println(animal.indexOf("fa",6)); //-1
 3X7X1Xsubstring()XEl siguiente código muestra cómo usar substring():  String ahorcado = "Anticonstitucionalidad"; \nSystem.out.println(ahorcado.substring(3)); //iconstitucionalidad \nSystem.out.println(ahorcado.substring(4,18)); //constitucional \nSystem.out.println(myStr.substring(myStr.indexOf("tit"))); //titucionalidad
+3X10X1Xequals()XSystem.out.println("abc".equals("ABC")); // false
+3X10X2Xequals()XSystem.out.println("ABC".equals("ABC")); // true
+3X11X1XequalsIgnoreCase()XSystem.out.println("abc".equalsIgnoreCase("ABC")); // true
 3X12X1XstartsWith()XSystem.out.println("abc".startsWith("a"));-verdadero //System.out.println("abc".startsWith("A"));-falso //System.out.println("abc".endsWith("c"));- verdadero //System.out.println("abc".endsWith("a"));- falso.
 3X13X1Xcontains()XSystem.out.println("abc".contains("b"));-verdadero //System.out.println("abc".contains("B"));-falso.
 3X14X1Xreplace()Xchar parameters:System.out.println("abcabc".replace('a', 'A')); // AbcAbc
