@@ -146,11 +146,23 @@ public class Catalogo {
 			entry = itr.next();
 			cap = entry.getValue();
 			conceptos = cap.getConceptos();
-
+			System.out.println("**********************************");
 			System.out.println(cap);
 			for (Concepto c : conceptos) {
 				if (c != null) {
+					System.out.println("_______________________________");
 					System.out.println("  " + c);
+					System.out.println();
+					System.out.println("  " + c.getTeoria());
+					System.out.println("-------------------------------");
+					for(Pregunta p : c.getPreguntas()) {
+						System.out.println("  " + p);
+						System.out.println("-------------------------------");
+					}
+					for(Ejemplo e : c.getEjemplos()) {
+						System.out.println("  " + e);
+						System.out.println();
+					}
 				}
 			}
 		}

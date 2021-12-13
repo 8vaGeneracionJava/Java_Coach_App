@@ -12,11 +12,14 @@ public class App {
 		
 		String separador = "*******************************************";
 
-		// INDICE CATALOGO COMPLETO
-		catalogo.mostrarIndiceCompleto();
-
 		Scanner read = new Scanner(System.in);
-		// MENÚ INICIAL
+		// INDICE CATALOGO COMPLETO
+		System.out.println("Mostrar catalogo completo? y/n");
+		if(read.nextLine().equalsIgnoreCase("y")) {
+			catalogo.mostrarIndiceCompleto();			
+		}
+
+		// MENÚ INICIALS
 		// Acá irá un método que muestre el mensaje de bienvenida
 		System.out.print("Bienvenido/a a Java Coach App! \nA continuacin ingrese su nombre: \n");
 		String nombre = read.nextLine();

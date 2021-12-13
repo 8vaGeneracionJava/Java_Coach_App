@@ -1,5 +1,7 @@
 package org.adaitw.generacion8va.catalogo;
 
+import java.util.Arrays;
+
 public class Ejemplo {
 	private int nroCapitulo;
 	private int nroConcepto;
@@ -35,6 +37,12 @@ public class Ejemplo {
 
 	public String getDescripcion() {
 		return descripcion;
+	}
+
+	@Override
+	public String toString() {
+		return "Ejemplo " + nroEjemplo + ": " + ejemplo + "\n" + descripcion;
 	}	
+	
 	//endregion
 }
