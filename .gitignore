@@ -11,6 +11,8 @@
 *.iml
 .idea/*
 .idea/
+.idea
+.idea/encodings.xml
 out/
 
 # Eclipse
